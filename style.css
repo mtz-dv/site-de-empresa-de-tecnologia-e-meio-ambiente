@@ -92,7 +92,7 @@ body {
 }
 
 .hero-content h2 {
-  font-size: 42px;
+  font-size: 40px;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -173,8 +173,9 @@ body {
 
 .about-img {
   flex: 1;
-  width: 100%;
+  width: 1%;
   border-radius: 10px;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
 }
 
 /* SERVIÇOS */
@@ -228,6 +229,102 @@ body {
 .impact h3 {
   color: #00b894;
   font-size: 28px;
+}
+
+/* CERTIFICADOS */
+
+.certificados-section {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.certificados-section h2 {
+  font-size: 2em;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.certificados-section p {
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.certificados-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cert-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.cert-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.cert-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.cert-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.cert-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transition: all 0.4s ease;
+}
+
+.cert-card h3 {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #009879;
+}
+
+.cert-card p {
+  font-size: 0.95em;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Animação de entrada */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efeito de expansão no hover */
+.cert-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cert-card:hover img {
+  width: 130px;
+  height: 130px;
 }
 
 /* CONTATO */
@@ -408,10 +505,6 @@ body {
   }
 }
 
-
-
-
 html {
   scroll-behavior: smooth;
 }
-
