@@ -97,6 +97,33 @@ body {
   margin-bottom: 15px;
 }
 
+.title span:after {
+  content: 'Coleta';
+  animation: words 6s infinite;
+}
+
+@keyframes words {
+  0%, 25% {
+    content: 'Coleta';
+    color:lawngreen
+  }
+
+  26%, 50% {
+    content: 'Reciclagem';
+    color: #ffc400;
+  }
+
+  51%, 75% {
+    content: 'Reutilização';
+    color: rgb(122, 246, 255);
+  }
+
+  76%, 100% {
+    content: 'Reaproveitamento';
+    color: #42ffb0;
+  }
+}
+
 .hero-content p {
   font-size: 18px;
   margin-bottom: 30px;
@@ -387,3 +414,4 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
